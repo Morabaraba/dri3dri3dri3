@@ -1,7 +1,16 @@
-## Rules
-# Your solution must implement the following API behaviors:
-# - A "get_voters_where" endpoint that takes the following optional arguments: county, month, party affiliation, active_status, and limit (the max number of results to return). The endpoint must return a JSON-formatted output, but the schema is up to you.
-# - All APIs must be RESTful (see The REST API in five minutes for some background if you need it). 
+import csv
 
-def get_voters_where():
-    return { 'hi': 'world'}, 200
+def get_voters_where(*args, **kwargs):
+    county = kwargs.get('county')
+    month = kwargs.get('month')
+    affiliation = kwargs.get('affiliation')
+    limit = kwargs.get('limit')
+    
+    result = []
+    with open('data/rows.csv', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            result.append(row)
+        
+    return result, 200
+    
