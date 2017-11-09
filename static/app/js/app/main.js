@@ -1,4 +1,4 @@
-/* global $ Slick dataView */
+/* global $ _ Slick dataView */
 (function(){
 var app = window.app = app || {};
 app.mount = app.mount || {};
@@ -111,6 +111,7 @@ app.main = function main() {
 };
 
 app.mount.myGrid = function mountMyGrid(data, columns, options, pluginOptions) {
+	var grid = { myGridReady: false };
 	$.onmount('#myGrid', function() {
 		var $self = $(this);
 		for (var i = 0; i < 100; i++) {
@@ -127,7 +128,7 @@ app.mount.myGrid = function mountMyGrid(data, columns, options, pluginOptions) {
 	
 		dataView = new Slick.Data.DataView();
 		dataView.setItems(data);
-		var grid = new Slick.Grid("#myGrid", dataView, columns, options);
+		grid = _.extend(grid, new Slick.Grid("#myGrid", dataView, columns, options));
 		grid.setSelectionModel(new Slick.CellSelectionModel());
 		grid.registerPlugin(new Slick.AutoTooltips());
 	
@@ -150,12 +151,24 @@ app.mount.myGrid = function mountMyGrid(data, columns, options, pluginOptions) {
 		});
 		
 		$self.data('grid', grid);
+		grid.myGridReady = true;
 		
 		var grid2 = new Slick.Grid("#myGrid2", data, columns, options);
 		grid2.setSelectionModel(new Slick.CellSelectionModel());
 	
 		grid2.registerPlugin(new Slick.CellExternalCopyManager(pluginOptions));
 	
-	})	
+	});
+
+	$.onmount('.slick-header .slick-header-column:first-child', function() {
+		var $self = $(this);
+		function filterClick(){
+			alert('filter');
+			return false; // do not bubble event
+		}
+		$self.children(':first-child').click(filterClick).html('&#x1f50d;');
+		$self.click(filterClick)
+	});
+	return grid;
 }
 })();
