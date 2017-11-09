@@ -5,12 +5,38 @@ info:
   title: Half a beast
 basePath: /v1
 paths:
-  /data:
+  /get-voters-where:
     get:
-      summary: get data
-      operationId: api.getData
+      summary: get voters where
+      operationId: api.get_voters_where
       tags:
         - data
+      parameters:
+        - name: county
+          in: query
+          description: county
+          required: false
+          type: integer
+        - name: month
+          in: query
+          description: month
+          required: false
+          type: integer
+        - name: affiliation
+          in: query
+          description: affiliation
+          required: false
+          type: integer
+        - name: status
+          in: query
+          description: status
+          required: false
+          type: integer
+        - name: limit
+          in: query
+          description: limit
+          required: false
+          type: integer          
       responses:
         default:
           description: data

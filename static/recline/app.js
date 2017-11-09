@@ -2,14 +2,15 @@
 jQuery(function($) {
   window.multiView = null;
   window.explorerDiv = $('.data-explorer-here');
-  jQuery.get('https://data.iowa.gov/resource/wxib-fsgn.json', function(data) {
+  jQuery.get('//dailyprogrammer-333-openhazel.c9users.io:8080/v1/get-voters-where', function(data) {
     // create the demo dataset
     var records = []
     _.each(data, function(record) {
         var keys = Object.keys(record);
         _.each(keys, function(key) {
+          if (key.indexOf(':@') === -1) return;
           var v = record[key];
-          var stippedKey = key.replace(':@', '');
+          var stippedKey = key.replace(':@', '__');
           record[stippedKey] = v;
           delete record[key];
         })
