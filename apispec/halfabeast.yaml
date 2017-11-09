@@ -1,0 +1,18 @@
+# https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v2.0/yaml/petstore.yaml
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Half a beast
+basePath: /v1
+paths:
+  /data:
+    get:
+      summary: get data
+      operationId: api.getData
+      tags:
+        - data
+      responses:
+        default:
+          description: data
+          schema: 
+            type: object
