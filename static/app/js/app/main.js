@@ -58,6 +58,7 @@ app.main = function main() {
 			}
 		}
 	}
+	app.undoRedoBuffer = undoRedoBuffer;
 	
 	// undo shortcut
 	$(document).keydown(function(e) {
