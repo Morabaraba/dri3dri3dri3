@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+  <title>apiplate: app.js</title>
+  <link rel="stylesheet" href="css/slickgrid/slick.grid.css" type="text/css"/>
+  <link rel="stylesheet" href="css/slickgrid/smoothness/jquery-ui-1.11.3.custom.css" type="text/css"/>
+  <link rel="stylesheet" href="css/slickgrid/examples.css" type="text/css"/>
+  
+  <link rel="stylesheet" href="css/goldenlayout/goldenlayout-base.css" type="text/css"/>
+  <link rel="stylesheet" href="css/goldenlayout/goldenlayout-dark-theme.css" type="text/css"/>
+  
+  <style>
+    .slick-cell.copied {
+      background: blue;
+      background: rgba(0, 0, 255, 0.2);
+      -webkit-transition: 0.5s background;
+    }
+  </style>
+  
+  <!-- Data Provider-->
+  <script type="text/javascript" src="//s3-us-west-2.amazonaws.com/s.cdpn.io/152047/data.js"></script
+  
+</head>
+<body>
+<div id="app" style="position:relative">
+  <div style="width:600px;">
+    <div id="myGrid" style="width:100%;height:300px;"></div>
+  </div>
+  <br/>
+  <div style="width:600px;">
+    <div id="myGrid2" style="width:100%;height:300px;" class="example-grid"></div>
+  </div>
+
+  <div class="options-panel">
+    <h2>Excel compatible copy/paste manager using DataView</h2>
+        <div>
+		 <strong>Thanks to <a href="https://github.com/Celebio/SlickGrid">Celebio</a>! <a href="http://labs.nereo.com/slick.html">(link to site)</a></strong><br /><br />
+          This is basically the same example than <a href="example-spreadsheet.html">example-spreadsheet.html</a>, 
+		  with the support of external excel-compatible software clipboard<br />
+        </div>
+    <h2>Paste from Excel-compatible:</h2>
+    <ul>
+      <li>Copy a range of cells to clipboard in Excel</li>
+      <li>Select a cell on slickgrid</li> 
+      <li>Use Ctrl-V keyboard shortcut to paste from the clipboard</li>
+      <li>Adds rows to bottom of grid if paste overflows</li>
+    </ul>
+    <h2>Copy for Excel-compatible:</h2>
+    <ul>
+        <li>Select a range of cells with a mouse</li>
+        <li>Use Ctrl-C shortcut to copy cells</li>
+        <li>You can paste the tabular data into Excel</li>
+    </ul>
+
+    <h2>Undo/redo support :</h2>
+    <ul>
+      <li>Use buttons to undo/redo copy/paste</li>
+    </ul>
+    <button onclick="app.undoRedoBuffer.undo()"><img src="" align="absmiddle"> Undo</button>
+    <button onclick="app.undoRedoBuffer.redo()"><img src="" align="absmiddle"> Redo</button>
+  </div>
+</div>
+
+<script src="lib.min.js"></script>
+<script src="app.min.js"></script>
+<script>
+  /* global $ app */
+  app.main();
+  $.onmount();
+</script>
+  
+</body>
+</html>
