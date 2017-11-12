@@ -1,25 +1,25 @@
-certifi==2017.11.5
-chardet==3.0.4
-click==6.7
-clickclick==1.2.2
-closure==20161201
-connexion==1.1.16
-Flask==0.12.2
-Flask-SQLAlchemy==2.3.2
-idna==2.6
-inflection==0.3.1
-itsdangerous==0.24
-Jinja2==2.10
-jsonschema==2.6.0
-MarkupSafe==1.0
-pathlib==1.0.1
-pyquibase==1.0
-PyYAML==3.12
-rcssmin==1.0.6
-requests==2.18.4
-six==1.11.0
-SQLAlchemy==1.1.15
-swagger-spec-validator==2.1.0
-typing==3.6.2
-urllib3==1.22
-Werkzeug==0.12.2
+certifi==2017.11.5 # Provide Mozilla's CA Bundle.
+chardet==3.0.4 # Universal Character Encoding Detector.
+click==6.7 # Wrapper around optparse for powerful command line utilities.
+clickclick==1.2.2 # click Utility functions.
+closure==20161201 # Google Closure Compiler(JAR) https://developers.google.com/closure/compiler/.
+connexion==1.1.16 # OpenAPI/Swagger API using Flask.
+Flask==0.12.2 # A microframework based on Werkzeug, Jinja2 and good intentions.
+Flask-SQLAlchemy==2.3.2 # Adds SQLAlchemy support to your Flask application.
+idna==2.6 # Internationalized Domain Names in Applications (IDNA).
+inflection==0.3.1 # String transformation library.
+itsdangerous==0.24 # Various helpers to pass trusted data to untrusted environments and back.
+Jinja2==2.10 # Small stand-alone template engine.
+jsonschema==2.6.0 # JSON Schema validation http://json-schema.org/.
+MarkupSafe==1.0 # Implements a XML/HTML/XHTML Markup safe strings.
+pathlib==1.0.1 # Object-oriented filesystem paths (UNMAINTAINED, upgrade to pathlib2).
+pyquibase==1.0 # Liquibase Database Refactoring (JAR) http://www.liquibase.org/.
+PyYAML==3.12 # YAML parser and emitter.
+rcssmin==1.0.6 # CSS Minifier.
+requests==2.18.4 # HTTP for Humans.
+six==1.11.0 # Python 2 and 3 compatibility utilities.
+SQLAlchemy==1.1.15 # SQL Database Abstraction Library.
+swagger-spec-validator==2.1.0 # Validation of OpenAPI/Swagger 2.0 specifications.
+typing==3.6.2 # Type Hints.
+urllib3==1.22 # HTTP library with thread-safe connection pooling, file post, etc.
+Werkzeug==0.12.2 # Swiss Army knife for web development.
