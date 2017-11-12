@@ -1,15 +1,16 @@
 # https://github.com/zalando/connexion#running-it
-import connexion
+
+
+from .core import api, app
+from .cli import *
+
 
 def main():
-    app = connexion.App(__name__, specification_dir='apispec/')
-    app.add_api('halfabeast.yaml')
-    
-    @app.app.route('/static/<path:path>')
-    def send_js(path):
+    api.add_api('halfabeast.yaml')
+    @app.route('/static/<path:path>') # for testing only use nginx to serve `/static`
+    def send_static(path):
         return send_from_directory('static', path)
-    
-    app.run(port=8080)    
+    app.run(host='0.0.0.0', port=8081)    
 
 
 if __name__ == '__main__':
