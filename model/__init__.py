@@ -28,7 +28,6 @@ def create_model_type(parent_class, child_class_name, child_table_name, extra_ch
 	child_table = Table(child_table_name, parent_table.metadata)
 	for column in parent_table.columns:
 		child_table.append_column(column.copy())
-	# TODO copy constraints, etc
 	extra_parent_class_attr = {
 		**{
 			'__abstract__': True
@@ -80,19 +79,6 @@ Manager = create_model_type(Employee, 'Manager', 'manager', {
 
 Company = create_model_type(Department, 'Company', 'company', {})
 
-'''
-Human3 = create_model_type(Human2, 'Human3', 'human3', {
-	'department_id' : Column(Integer, ForeignKey('company.id')),
-	'department' : relationship(
-		Department,
-		backref=backref('company',
-						 uselist=True,
-						 cascade='delete,all'))
-})
-'''
-
-
-
 def main():
 	from sqlalchemy import create_engine
 	engine = create_engine('sqlite:///orm_in_detail.sqlite')
@@ -100,8 +86,8 @@ def main():
 	from sqlalchemy.orm import sessionmaker
 	session = sessionmaker()
 	session.configure(bind=engine)
-	Base.metadata.create_all(engine)
 
+	Base.metadata.create_all(engine)
 
 if __name__ == '__main__':
 	main()
