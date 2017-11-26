@@ -3,3 +3,4 @@ orm_in_detail.sqlite
 static/app/app.min.js
 static/app/lib.min.js
 config.py
+apiplate.egg-info

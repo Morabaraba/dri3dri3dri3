@@ -1,14 +1,14 @@
 # https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v2.0/yaml/petstore.yaml
 swagger: "2.0"
 info:
-  version: 1.0.0
+  version: 3.3.3
   title: Half a beast
-basePath: /v1
+basePath: /v333
 paths:
   /get-voters-where:
     get:
       summary: get voters where
-      operationId: api.get_voters_where
+      operationId: apiplate.api.get_voters_where
       tags:
         - data
       parameters:

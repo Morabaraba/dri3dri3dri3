@@ -1,4 +1,7 @@
-# 34MB Py Dependencies(50MB include dev packages closure pyquibase)
+# 34MB Py Dependencies(50MB include dev packages closure pyquibase) (TODO add celery MB)
+amqp==2.2.2
+billiard==3.5.0.3
+celery==4.1.0
 certifi==2017.11.5 # Provide Mozilla's CA Bundle.
 chardet==3.0.4 # Universal Character Encoding Detector.
 click==6.7 # Wrapper around optparse for powerful command line utilities.
@@ -12,9 +15,11 @@ inflection==0.3.1 # String transformation library.
 itsdangerous==0.24 # Various helpers to pass trusted data to untrusted environments and back.
 Jinja2==2.10 # Small stand-alone template engine.
 jsonschema==2.6.0 # JSON Schema validation http://json-schema.org/.
+kombu==4.1.0
 MarkupSafe==1.0 # Implements a XML/HTML/XHTML Markup safe strings.
 pathlib==1.0.1 # Object-oriented filesystem paths (UNMAINTAINED, upgrade to pathlib2).
 # pyquibase==1.0 # Liquibase Database Refactoring (JAR) http://www.liquibase.org/.
+pytz==2017.3
 PyYAML==3.12 # YAML parser and emitter.
 rcssmin==1.0.6 # CSS Minifier.
 requests==2.18.4 # HTTP for Humans.
@@ -23,4 +28,5 @@ SQLAlchemy==1.1.15 # SQL Database Abstraction Library.
 swagger-spec-validator==2.1.0 # Validation of OpenAPI/Swagger 2.0 specifications.
 typing==3.6.2 # Type Hints.
 urllib3==1.22 # HTTP library with thread-safe connection pooling, file post, etc.
+vine==1.1.4
 Werkzeug==0.12.2 # Swiss Army knife for web development.
