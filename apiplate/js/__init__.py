@@ -1,21 +1,37 @@
+try:
+    from closure import run as closure_run
+except ImportError:
+    # raise ImportError('Could not import closure. No javascript cli commands')
+    closure_run = None
+    
 from pathlib import Path
 
-import closure
-
+def check_closure(print_error=True):
+    if not closure_run:
+        if print_error:
+            print('Could not find closure. `pip install closure` to use command.')
+        return False
+    return True
+    
 def find_js_files(indir):
 	rootdir = Path(indir)
 	# Return a list of regular files only, not directories
 	return [f.relative_to(indir).as_posix() for f in rootdir.glob('**/*.js') if f.is_file()]
 
 def closure_minify_js_app():
+    if not check_closure():
+        return False
     out_js_file='static/app/app.min.js'
     js_args= [
         '--js=static/app/js/app/**.js',
         '--js_output_file=%s' % (out_js_file),
     ]
-    closure.run(*js_args)
+    closure_run(*js_args)
+    return True
 
 def closure_minify_js_lib():
+    if not check_closure():
+        return False
     out_js_file='static/app/lib.min.js'
     js_lib_dir = 'static/app/js/lib'
     js_arg_templ =  '--js=%s'
@@ -47,4 +63,5 @@ def closure_minify_js_lib():
     js_args = js_args + [
         '--js_output_file=%s' % (out_js_file),
     ]
-    closure.run(*js_args)
+    closure_run(*js_args)
+    return True
