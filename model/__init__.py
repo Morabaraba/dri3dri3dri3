@@ -22,7 +22,7 @@ def create_model_type(parent_class, child_class_name, child_table_name, extra_ch
 		extra_parent_class_attr (dict): Extra parent attributes you want to add before parent_class.
 		
 	Returns:
-		The new mapeed sqlalchemy declarative class.
+		The new mapped sqlalchemy declarative class.
 	'''
 	parent_table = parent_class.__table__
 	child_table = Table(child_table_name, parent_table.metadata)
@@ -67,21 +67,26 @@ class Employee(Base):
 	# Use cascade='delete,all' to propagate the deletion of a Department onto its Employees
 	department = relationship(
 		Department,
-		backref=backref('employees',
+		backref=backref('employee',
 						 uselist=True,
 						 cascade='delete,all'))
 
-	 
+Company = create_model_type(Department, 'Company', 'company', {})
+
 Manager = create_model_type(Employee, 'Manager', 'manager', {
-	'department_id' : Column(Integer, ForeignKey('department.id'))
+	'company_id' : Column(Integer, ForeignKey('company.id')), # TODO ForeignKey does not get created :/
+	'company' : relationship(
+		Company,
+		backref=backref('manager',
+						 uselist=True,
+						 cascade='delete,all'))
 })
 
 
-Company = create_model_type(Department, 'Company', 'company', {})
 
 def main():
 	from sqlalchemy import create_engine
-	engine = create_engine('sqlite:///orm_in_detail.sqlite')
+	engine = create_engine('sqlite:///orm_in_detail.sqlite') # http://www.pythoncentral.io/sqlalchemy-orm-examples/
 	 
 	from sqlalchemy.orm import sessionmaker
 	session = sessionmaker()
@@ -91,3 +96,4 @@ def main():
 
 if __name__ == '__main__':
 	main()
+			
