@@ -23,6 +23,8 @@ if RunAs.API in run_as: # if we run as API we create `api` and `app` object
     (api, app) = setup_api()    
 elif RunAs.CLI in run_as: # if we run as CLI we only create `app` and set `api = None`
     (api, app) = setup_app()
+else:
+    (api, app) = (None, None) # goodluck
 
 
 if RunAs.TASKS in run_as: #

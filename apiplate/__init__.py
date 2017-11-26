@@ -14,4 +14,4 @@ if RunAs.CLI in run_as:
 
 
 if api:
-    api.add_api('halfabeast.yaml')
+    api.add_api('halfabeast.yaml') # TODO loop over `apispec/*.yaml` and add all files

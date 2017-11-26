@@ -1,5 +1,5 @@
-from .core import task_app
+from celery import shared_task
 
-@task_app.task
+@shared_task
 def add(x, y):
     return x + y
