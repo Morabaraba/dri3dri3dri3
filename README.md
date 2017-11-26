@@ -6,19 +6,77 @@
     \____ | |__| /______  /__\____ | |__| /______  /__\____ | |__| /______  /__|
          \/             \/        \/             \/        \/             \/    
     ----------------------------------------------------------------------------
-    py connexion openapi boilerplate 
+    apiplate a py connexion openapi boilerplate 
 
 
 ## Introduction
 
-A late submission to [[2017-09-29] Challenge #333 [Hard] Build a Web API-driven Data Site][#333]. Using python with the api powered by [connexion], [swagger-ui] (backbonejs) and [reclinejs] for building data applications(backbonejs).
+This was a attempt to do [[2017-09-29] Challenge #333 [Hard] Build a Web API-driven Data Site][#333]. 
+Using python with the api powered by [connexion], [swagger-ui] (backbonejs) and 
+[reclinejs] for building data applications(backbonejs).
 
-## Rules
+I got bored and started to play around with `pip` packages and different ideas
+I have for web boilerplate. 
 
-Your solution must implement the following API behaviors:
+This is a wip and pet project; and I am aware I need to look into Flask Blueprints!
 
-- A "get_voters_where" endpoint that takes the following optional arguments: county, month, party affiliation, active_status, and limit (the max number of results to return). The endpoint must return a JSON-formatted output, but the schema is up to you.
-- All APIs must be RESTful (see The REST API in five minutes for some background if you need it). 
+### Install and Run
+
+
+```sh
+virtualenv -p python3 venv # might need to install it with `pip install virtualenv` first.
+source venv/bin/activate
+pip install -r requirements.txt # does a -e . and we did not pin any version in a attempt to use latest and greatest so code might break.
+ln -s apiplate/config.py.example apiplate/config.py
+export FLASK_APP=apiplate
+flask
+```
+
+## Tech
+
+This is a wip and pet project, exploring the following tech:
+
+#### Python:
+
+- OpenAPI/Swagger
+- Flask/Connexion
+- Celery
+
+#### Javascript:
+
+- Google Closure Compiler
+- Swagger UI v2
+- Reclinejs
+- Slickgrid
+- Backbone
+
+#### Backend:
+
+- RabbitMQ
+- SQLLite3
+
+
+#### Notes
+
+Our python virtual env site-packages weigh in at 42 MB.
+
+### FAQ
+
+**Q:** It is *2017* Why backbone, $, _, and friends? 
+And not react/redux, angular2, 
+vue.js, mithril, closure library, ember, or `<your fav js lib here>`?
+
+**A:** Because I like and want to use [slickgrid] and it depends on $.
+Swagger-UI v2 and Recline uses backbonejs. So just adding another
+library to manage js does not seem optimal. And a goal is to use
+google closure compiler to get the js to a acceptable minified size(atm 250kb for demo app with libs).
+
+[slickgrid]: https://github.com/6pac/SlickGrid
+
+## Initial Setup
+
+While this steps is not needed anymore if you followed `Install and run` above
+but I'm leaving here as a demo how this boilerplate got setup initialy.
 
 ### Setup Env
 
