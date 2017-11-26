@@ -11,6 +11,9 @@
 
 ## Introduction
 
+I want to use `apiplate` as a testbed for learning python development and
+asking the community questions with solid examples.
+
 This was a attempt to do [[2017-09-29] Challenge #333 [Hard] Build a Web API-driven Data Site][#333]. 
 Using python with the api powered by [connexion], [swagger-ui] (backbonejs) and 
 [reclinejs] for building data applications(backbonejs).
@@ -58,7 +61,7 @@ This is a wip and pet project, exploring the following tech:
 
 #### Notes
 
-Our python virtual env site-packages weigh in at 42 MB.
+Our python virtualenv site-packages weigh in at 42 MB.
 
 ### FAQ
 
@@ -69,14 +72,14 @@ vue.js, mithril, closure library, ember, or `<your fav js lib here>`?
 **A:** Because I like and want to use [slickgrid] and it depends on $.
 Swagger-UI v2 and Recline uses backbonejs. So just adding another
 library to manage js does not seem optimal. And a goal is to use
-google closure compiler to get the js to a acceptable minified size(atm 250kb for demo app with libs).
+google closure compiler to get the js to an acceptable minified size(atm 250kb for demo app with libs).
 
 [slickgrid]: https://github.com/6pac/SlickGrid
 
 ## Initial Setup
 
 While this steps is not needed anymore if you followed `Install and run` above
-but I'm leaving here as a demo how this boilerplate got setup initialy.
+but I'm leaving here as a demo how this boilerplate got setup initially.
 
 ### Setup Env
 
