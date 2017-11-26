@@ -25,10 +25,3 @@ elif RunAs.CLI in run_as: # if we run as CLI we only create `app` and set `api =
     (api, app) = setup_app()
 else:
     (api, app) = (None, None) # goodluck
-
-
-if RunAs.TASKS in run_as: #
-    from celery import Celery
-    task_app = Celery('tasks', broker='pyamqp://guest@localhost//') # TODO get config from .config
-else:
-    task_app = None

@@ -15,10 +15,10 @@ def index_view():
     
 @app.route('/task/add') 
 def task_add_view():
-    if task_app:
-        r = add.delay(1,1)
-    else:
-        r = add(1,1)
+    #if not task_app:
+    r = add.delay(1,1)
+    #else:
+    #    r = add(1,1)
     return str(r)
     
     

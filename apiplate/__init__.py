@@ -2,7 +2,7 @@ from flask import render_template
 
 from .options import RunAs
 from .config import run_as
-from .core import api, app, task_app
+from .core import api, app
 
 
 if RunAs.ROUTES in run_as:
