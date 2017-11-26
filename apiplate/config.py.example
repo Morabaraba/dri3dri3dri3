@@ -1,3 +1,3 @@
 from .options import RunAs
     
-run_as = (RunAs.API, RunAs.ROUTES) # (RunAs.API, RunAs.CLI, RunAs.ROUTES) or (None, ) if you want to start no module (goodluck, why, because?)
+run_as = (RunAs.CLI, RunAs.API, RunAs.ROUTES) # (RunAs.API, RunAs.CLI, RunAs.ROUTES) or (None, ) if you want to start no module (goodluck, why, because?)

@@ -1,6 +1,6 @@
 from flask import render_template, send_from_directory
 
-from .core import app, task_app
+from .core import app
 
 from .tasks import add
 
