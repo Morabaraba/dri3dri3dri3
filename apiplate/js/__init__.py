@@ -55,6 +55,8 @@ def closure_minify_js_lib():
         js_arg_templ % 'static/app/js/lib/lodash.v3.10.1.custom.min.js',
         js_arg_templ % 'static/app/js/lib/backbone-v1.3.3.min.js',
         js_arg_templ % 'static/app/js/lib/goldenlayout-v1.5.9-mod.js',
+        js_arg_templ % 'static/app/js/lib/jsoneditor.v0.7.28.js',
+        js_arg_templ % 'static/app/js/lib/mqttws31.js',
         ] # hard code specific deps to the top
         
     for js_file in find_js_files(js_lib_dir):
