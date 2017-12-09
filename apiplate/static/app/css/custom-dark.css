@@ -1,0 +1,22 @@
+body {
+    background: #222222; /* goldenlayout dark background*/
+}
+
+.lm_popin {
+    background: black;
+}
+
+.slick-cell.copied { /* animation for copied slickgrid cells */
+  background: blue;
+  background: rgba(0, 0, 255, 0.2);
+  -webkit-transition: 0.5s background;
+}
+
+.famfamfam-silk {
+    display: inline-block;
+}
+
+.btn > .famfamfam-silk { /* fix bs2 buttons for famfamfam icons */
+    margin-top: -1px;
+}
+

@@ -1,0 +1,30 @@
+/* boostrap2 changes for sigblad */
+
+.navbar {
+    margin-bottom: 0px !important;
+}
+
+.navbar-inner { 
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 0px;
+}
+
+.navbar-menu { /* copied from navbar-inner */
+    margin-bottom: 3px !important;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background: #222222; /* goldenlayout dark background */
+    
+    background-repeat: repeat-x;
+    border: 0px;
+
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+}

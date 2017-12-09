@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-	
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
@@ -118,16 +118,48 @@
 
 	<div id="myLayout"></div>
 
-<!-- Data Provider-->
-<script type="text/javascript" src="//s3-us-west-2.amazonaws.com/s.cdpn.io/152047/data.js"></script>
+	<!-- Debug JS Here -->
+	<script src="js/lib/firebugx.js"></script>
 
-<script src="lib.min.js"></script>
-<script src="app.min.js"></script>
+	<script src="js/lib/jquery-1.11.2.min.js"></script>
+	<script src="js/lib/jquery-ui-1.11.3.min.js"></script>
+	<script src="js/lib/jquery.event.drag-2.3.0.js"></script>
 
-<script>
-	/* global $ app */
-	app.main();
-</script>
+	<script src="js/lib/slickgrid/slick.core.js"></script>
+	<script src="js/lib/slickgrid/plugins/slick.autotooltips.js"></script>
+	<script src="js/lib/slickgrid/plugins/slick.cellrangedecorator.js"></script>
+	<script src="js/lib/slickgrid/plugins/slick.cellrangeselector.js"></script>
+	<script src="js/lib/slickgrid/plugins/slick.cellexternalcopymanager.js"></script>
+	<script src="js/lib/slickgrid/plugins/slick.cellselectionmodel.js"></script>
+	<script src="js/lib/slickgrid/slick.editors.js"></script>
+	<script src="js/lib/slickgrid/slick.formatters.js"></script>
+	<script src="js/lib/slickgrid/slick.grid.js"></script>
+	<script src="js/lib/slickgrid/slick.dataview.js"></script>
+
+	<script src="js/lib/onmount.v1.3.0.js"></script>
+	<script src="js/lib/lodash.v3.10.1.custom.min.js"></script>
+	<script src="js/lib/backbone-v1.3.3.min.js"></script>
+	<script src="js/lib/goldenlayout-v1.5.9-mod.js"></script>
+	<script src="js/lib/jsoneditor.v0.7.28.js"></script>
+	<script src="js/lib/mqttws31.js"></script>
+
+	<script src="js/lib/bootstrap-v2.3.2.min.js"></script>
+
+	<!-- Data Provider-->
+	<script type="text/javascript" src="//s3-us-west-2.amazonaws.com/s.cdpn.io/152047/data.js"></script>
+
+	<script src="js/app/goldenlayout.js"></script>
+	<script src="js/app/router.js"></script>
+	<script src="js/app/main.js"></script>
+
+	<script src="js/app/mounts/myGrid.js"></script>
+	<script src="js/app/routes/index.js"></script>
+
+	<script>
+		/* global $ app */
+		app.main();
+	</script>
 
 </body>
+
 </html>
