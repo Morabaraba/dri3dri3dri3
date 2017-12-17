@@ -110,6 +110,10 @@
         grid = app.mounts.myGrid(data, columns, options, pluginOptions);
         
         var layout = app.mounts.myLayout();
+        var menu = app.mounts.myMenu();
+        var menubar = app.mounts.myMenuBar();
+        
+        var sigbladMenu = app.mounts.myMenu('js-sigblad-menu', 'js/app/models/sigblad.json');
     };
 
 })();

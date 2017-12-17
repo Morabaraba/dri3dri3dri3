@@ -20,3 +20,21 @@ body {
     margin-top: -1px;
 }
 
+.menubar-divider {
+    display: inline-block;
+    width: 4px;
+}
+
+
+#wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+#myLayout {
+    width: 100%;
+    
+}
+
+

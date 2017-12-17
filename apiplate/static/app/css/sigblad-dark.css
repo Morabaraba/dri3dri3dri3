@@ -12,9 +12,9 @@
 }
 
 .navbar-menu { /* copied from navbar-inner */
-    margin-bottom: 3px !important;
+    height:32px;
     padding-top: 2px;
-    padding-bottom: 2px;
+    
     
     padding-right: 20px;
     padding-left: 20px;
@@ -27,4 +27,21 @@
     -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
     -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
     box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+}
+
+.input-append {
+    margin-bottom: 0px !important;
+}
+
+.menubar-bottom-padding {
+    padding-bottom: 3px;
+}
+
+.dropdown-brand {
+    display: inline;
+}
+
+.dropdown-brand > .dropdown-menu {
+    
+    top: 40px; left: -89px;
 }
