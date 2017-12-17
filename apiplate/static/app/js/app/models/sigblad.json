@@ -1,0 +1,28 @@
+{
+	"Sigblad": {
+		"id": "js-menu-sigblad",
+		"icon_css": "",
+		"class": "brand",
+		"children": {
+			"Settings": {
+				"id": "js-menu-settings",
+				"icon_css": "famfamfam-silk cog"
+
+			},
+			"div0": {
+				"divider": true
+			},
+			"Issues": {
+				"id": "js-menu-github",
+				"icon_css": "famfamfam-silk help"
+
+			},
+			"About": {
+				"id": "js-menu-about",
+				"icon_css": "famfamfam-silk information"
+
+			}
+		}
+	}
+
+}

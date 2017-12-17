@@ -1,0 +1,73 @@
+{
+	"File": {
+		"id": "js-menu-file",
+		"icon_css": "",
+		"shortcut": "F",
+		"children": {
+			"New": {
+				"id": "js-menu-new",
+				"icon_css": "famfamfam-silk page",
+				"shortcut": "N"
+			},
+			"Open": {
+				"id": "js-menu-open",
+				"icon_css": "famfamfam-silk folder_page",
+				"shortcut": "O"
+			},
+			"Save": {
+				"id": "js-menu-save",
+				"icon_css": "famfamfam-silk table_save",
+				"shortcut": "S"
+			},
+			"Download": {
+				"id": "js-menu-download",
+				"icon_css": "famfamfam-silk drive_disk",
+				"shortcut": "D"
+			},
+			"div1": {
+				"divider": true
+			},
+			"Share": {
+				"id": "js-menu-share",
+				"icon_css": "famfamfam-silk page_link",
+				"shortcut": "h"
+			}
+		}
+	},
+	"Edit": {
+		"id": "js-menu-file",
+		"shortcut": "E",
+		"children": {
+			"Undo": {
+				"id": "js-menu-undo",
+				"icon_css": "famfamfam-silk arrow_undo",
+				"shortcut": "U",
+				"onclick": "app.undoRedoBuffer.undo()"
+			},
+			"Redo": {
+				"id": "js-menu-redo",
+				"icon_css": "famfamfam-silk arrow_redo",
+				"shortcut": "R",
+				"onclick": "app.undoRedoBuffer.redo()"
+			},
+			"div1": {
+				"divider": true
+			},
+			"Cut": {
+				"id": "js-menu-cut",
+				"icon_css": "famfamfam-silk cut",
+				"shortcut": "Cut"
+			},
+			"Copy": {
+				"id": "js-menu-copy",
+				"icon_css": "famfamfam-silk page_copy",
+				"shortcut": "C"
+			},
+			"Paste": {
+				"id": "js-menu-download",
+				"icon_css": "famfamfam-silk page_paste",
+				"shortcut": ""
+			}
+		}
+	}
+}
