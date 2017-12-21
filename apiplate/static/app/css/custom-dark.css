@@ -38,3 +38,7 @@ body {
 }
 
 
+.js-app-alert {
+    position: relative;
+    float: right;
+}

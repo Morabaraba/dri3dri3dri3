@@ -20,7 +20,7 @@
 
 	var exampleStockConfig = {
 		content: [{
-			type: 'row',
+			type: 'stack',
 			content: [{
 				type: 'component',
 				title: 'Example',
@@ -94,10 +94,10 @@
 			$el.append($grid2);
 
 			function resizeGrids() {
-				var elHeightDiv2 = $el.height() / 2;
-
-				$grid1.css('height', elHeightDiv2);
-				$grid2.css('height', elHeightDiv2);
+				//var elHeightDiv2 = $el.height() / 2;
+                $grid1.css('height',  $el.height());
+				//$grid1.css('height', elHeightDiv2);
+				//$grid2.css('height', elHeightDiv2);
 				
 			}
 			container.on('resize',
