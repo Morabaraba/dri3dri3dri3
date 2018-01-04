@@ -1,7 +1,8 @@
 /* global $ _ Backbone Slick dataView */
 (function() {
 	var app = window.app = window.app || {};
-	app.class = app.class || {}
+	app.class = app.class || {};
+	
 	var AppRouter = app.class.AppRouter = Backbone.Router.extend({
 
 		routes: {

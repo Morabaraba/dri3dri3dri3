@@ -114,6 +114,10 @@
         var menubar = app.mounts.myMenuBar();
         
         var sigbladMenu = app.mounts.myMenu('js-sigblad-menu', 'js/app/models/sigblad.json');
+        
+        app.state.connection = app.wamp.connect();
+        
     };
-
+    
+    
 })();

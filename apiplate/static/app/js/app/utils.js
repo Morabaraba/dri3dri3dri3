@@ -45,7 +45,8 @@ var modalHtml = '<div id="myModal" class="modal hide fade" tabindex="-1" role="d
 			};
 			
 			$modal.on('hidden', function () {
-  $modal.destroy();
+  //$modal.destroy();
+  console.log('TODO destroy modal')
 })
 
 			return $modal;
