@@ -56,7 +56,10 @@ def closure_minify_js_lib():
         js_arg_templ % 'static/app/js/lib/backbone-v1.3.3.min.js',
         js_arg_templ % 'static/app/js/lib/goldenlayout-v1.5.9-mod.js',
         js_arg_templ % 'static/app/js/lib/jsoneditor.v0.7.28.js',
-        js_arg_templ % 'static/app/js/lib/mqttws31.js',
+        # js_arg_templ % 'static/app/js/lib/mqttws31.js',
+        # js_arg_templ % 'static/app/js/lib/autobahn.17.5.2.js',
+        js_arg_templ % 'static/app/js/lib/backbone.wamp.2.0.0.js',
+        js_arg_templ % 'static/app/js/lib/hashids-1.1.1.js',
         js_arg_templ % 'static/app/js/lib/bootstrap-v2.3.2.min.js',
         
         ] # hard code specific deps to the top
